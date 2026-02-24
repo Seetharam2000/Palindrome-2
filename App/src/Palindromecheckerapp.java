@@ -31,9 +31,39 @@ public class Palindromecheckerapp {
      * @Seetharam args Command -Line arguments
      */
     public static void main(String[] args)  {
-        System.out.println("Welcome to the palindrome checker managment app");
-        System.out.println("Version : 1.0");
-        System.out.println("System  initialized successfully ");
+        // Class declaration
 
-    }
-}
+
+            // Main method - entry point of the program
+
+                // Hardcoded string literal
+                String word = "madam";
+
+                // Check if the string is a palindrome
+                if (isPalindrome(word)) {
+                    System.out.println(word + " is a palindrome.");
+                } else {
+                    System.out.println(word + " is not a palindrome.");
+                }
+            }
+
+            // Method to check palindrome condition
+            public static boolean isPalindrome(String str) {
+                int left = 0;
+                int right = str.length() - 1;
+
+                while (left < right) {
+                    if (str.charAt(left) != str.charAt(right)) {
+                        return false;
+                    }
+                    left++;
+                    right--;
+                }
+                return true;
+            }
+        }
+
+
+
+
+
